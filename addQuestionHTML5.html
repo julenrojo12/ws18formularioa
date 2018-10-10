@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Add Title HTML5</title>
+		<title>ADD QUESTION</title>
 		<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/A726214D-AE8F-2043-B654-2F94B663948B/main.js" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/1C55950A-D85B-CC4E-AC95-386C1CF2F9E7/abn/main.css"/>
 	</head>
 	
@@ -39,13 +39,13 @@
 		<br>
 		<form id="galderenF" name="galderenF" action="php/proba.php" onsubmit="return checkForm(this);" method="POST"> 
 			Egilearen eposta(*): <input type="email" name="email" id="email" required pattern="^([a-z]{2,})([0-9]{3})@ikasle\.ehu\.eus$" value="xxxxxx000@ikasle.ehu.eus" onClick="this.value=''" oninvalid="this.setCustomValidity('Sartu emaila formatu egokian')" oninput="setCustomValidity('')"><br>
-			Galderaren testua(*): <input type="text" name="galdera" id="galdera" required pattern="^\w(\w|\s){9,}$" oninvalid="this.setCustomValidity('Sartu gutxienez 10 karaktereko luzeera duen galdera')" oninput="setCustomValidity('')"><br>
-			Erantzun zuzena(*): <input type="text" name="zuzena" id="zuzena" required pattern="^\w(\w|\s)+$" oninvalid="this.setCustomValidity('Erantzun zuzena ezin da hutsik utzi.')" oninput="setCustomValidity('')"><br>
-			Erantzun okerra #1(*): <input type="text" name="okerra1" id="okerra1" required pattern="^\w(\w|\s)+$" oninvalid="this.setCustomValidity('Erantzun okerra ezin da hutsik utzi.')" oninput="setCustomValidity('')"><br>
-			Erantzun okerra #2(*): <input type="text" name="okerra2" id="okerra2" required pattern="^\w(\w|\s)+$" oninvalid="this.setCustomValidity('Erantzun okerra ezin da hutsik utzi.')" oninput="setCustomValidity('')"><br>
-			Erantzun okerra #3(*): <input type="text" name="okerra3" id="okerra3" required pattern="^\w(\w|\s)+$" oninvalid="this.setCustomValidity('Erantzun okerra ezin da hutsik utzi.')" oninput="setCustomValidity('')"><br>
+			Galderaren testua(*): <input type="text" name="galdera" id="galdera" required pattern="[^']{10,}?$" oninvalid="this.setCustomValidity('Sartu gutxienez 10 karaktereko luzeera duen galdera')" oninput="setCustomValidity('')"><br>
+			Erantzun zuzena(*): <input type="text" name="zuzena" id="zuzena" required oninvalid="this.setCustomValidity('Erantzun zuzena ezin da hutsik utzi.')" oninput="setCustomValidity('')"><br>
+			Erantzun okerra #1(*): <input type="text" name="okerra1" id="okerra1" required oninvalid="this.setCustomValidity('Erantzun okerra ezin da hutsik utzi.')" oninput="setCustomValidity('')"><br>
+			Erantzun okerra #2(*): <input type="text" name="okerra2" id="okerra2" required oninvalid="this.setCustomValidity('Erantzun okerra ezin da hutsik utzi.')" oninput="setCustomValidity('')"><br>
+			Erantzun okerra #3(*): <input type="text" name="okerra3" id="okerra3" required oninvalid="this.setCustomValidity('Erantzun okerra ezin da hutsik utzi.')" oninput="setCustomValidity('')"><br>
 			Galderaren zailtasuna(*): <input type="text" name="zailt" id="zailt" required pattern="^[0-5]$" oninvalid="this.setCustomValidity('Zailtasuna 0 eta 5 arteko zenbakia izan behar da')" oninput="setCustomValidity('')"><br>
-			Galderaren gai-arloa(*): <input type="text" name="zuzena" id="zuzena" required pattern="^\w(\w|\s)+$" oninvalid="this.setCustomValidity('Gaia ezin da hutsik utzi.')" oninput="setCustomValidity('')"><br>
+			Galderaren gai-arloa(*): <input type="text" name="zuzena" id="zuzena" required oninvalid="this.setCustomValidity('Gaia ezin da hutsik utzi.')" oninput="setCustomValidity('')"><br>
 			Galderarekin zer-ikusia duen irudia: <input name="upfile1" id="upfile1" type="file" /><br>
 
 			<br>
