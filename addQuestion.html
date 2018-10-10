@@ -15,7 +15,7 @@
 		$("#galderenF").submit(function(){
 	 
 			//guztiak bete direla
-			hutsik = new RegExp(/^([Aa-zZ]+)|([0-9]+)$/);
+			hutsik = new RegExp(/^([Aa-zZ]+)|([0-9]+)|([?,.])$/);
 			if(!hutsik.test($("#email").val())){
 				alert("Mesedez emaila sartu!");
 				return false;
