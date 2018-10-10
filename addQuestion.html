@@ -69,7 +69,7 @@
 				return false;
 			}
 			//Galderaren testuaren luzerak gutxienez 10eko luzera izango du.
-			pattern3 = new RegExp(/^([Aa-zZ]{1,})|([0-9]{1,}){10,}$/);
+			pattern3 = new RegExp(/^[a-zA-Z0-9 ]{10,}$/);
 			if (!pattern3.test($("#galdera").val())){
 				alert("Galderaren testua luzeagoa izan behar da.");
 				return false;
