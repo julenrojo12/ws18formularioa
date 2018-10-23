@@ -4,7 +4,7 @@
 	if($local){
 		$zerbitzaria = "localhost";
 		$erabiltzailea = "id7132366_angelaescon"; //bakoitza berea
-		$gakoa = "qwertyuiop";
+		$gakoa = "";
 		$db = "id7132366_quiz";
 	}else{
 		$zerbitzaria = "localhost";
