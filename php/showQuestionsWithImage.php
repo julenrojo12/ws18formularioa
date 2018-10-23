@@ -24,4 +24,6 @@
 		echo "0 galdera";
 	}	
 	
+	echo "<p><a href='../layout.html'> Hasiera </a>";
+	
 ?>	
