@@ -56,8 +56,8 @@
 		$sql = "INSERT INTO erregistratuak(EPOSTA,DEITURAK,PASAHITZA,ARGAZKIA) VALUES ('$_POST[email]', '$_POST[deiturak]', '$_POST[pasahitza]', '$imagetmp')";
 		
 		//
-		$sql = mysqli_query($esteka,"SELECT * FROM `erregistratuak` WHERE `EPOSTA` LIKE '$_POST[email]'");
-		$count = mysqli_num_rows($sql);
+		$sql2 = mysqli_query($esteka,"SELECT * FROM `erregistratuak` WHERE `EPOSTA` LIKE '$_POST[email]'");
+		$count = mysqli_num_rows($sql2);
 			if($count != "0"){
 				echo " Erabiltzailea badago erregistratuta.";
 			}else{
@@ -66,6 +66,7 @@
 					die('Errorea query-a gauzatzerakoan: ' .mysqli_error($esteka));
 				}
 				echo "Erabiltzaile bat gehitu da!";
+				echo "<p><a href='../layout.html'> Hasiera </a>";
 				}
 		//
 	}else{
