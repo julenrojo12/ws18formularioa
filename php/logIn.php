@@ -18,7 +18,7 @@
 			<input type="reset" value="Ezabatu"/>
 	</form> 	
 	<br>	
-	<span><a href='signUp.php'>SignUp</span>
+	<span><a href='signUp.php'>SignUp</span><br>
 	<span><a href='../layout.html'>Home</a></span>
 	</div>
 	
@@ -48,7 +48,7 @@
 					echo " Pasahitza ez da egokia";
 				}else{
 					echo " Ondo sartu zara!";
-					echo "<p><a href='../layout2.html'> Hasiera </a>";
+					echo "<p><a href='../layout2.html/?erabil=email'> Hasiera </a>";
 			}
 			}
 			

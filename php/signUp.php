@@ -55,11 +55,19 @@
 		$imagetmp=addslashes(file_get_contents($_FILES['file-upload']['tmp_name']));
 		$sql = "INSERT INTO erregistratuak(EPOSTA,DEITURAK,PASAHITZA,ARGAZKIA) VALUES ('$_POST[email]', '$_POST[deiturak]', '$_POST[pasahitza]', '$imagetmp')";
 		
-		$ema=mysqli_query($esteka, $sql);
-		if (!$ema) {
-			die('Errorea query-a gauzatzerakoan: ' .mysqli_error($esteka));
-		}
-		echo "Erabiltzaile bat gehitu da!";
+		//
+		$sql = mysqli_query($esteka,"SELECT * FROM `erregistratuak` WHERE `EPOSTA` LIKE '$_POST[email]'");
+		$count = mysqli_num_rows($sql);
+			if($count != "0"){
+				echo " Erabiltzailea badago erregistratuta.";
+			}else{
+				$ema=mysqli_query($esteka, $sql);
+				if (!$ema) {
+					die('Errorea query-a gauzatzerakoan: ' .mysqli_error($esteka));
+				}
+				echo "Erabiltzaile bat gehitu da!";
+				}
+		//
 	}else{
 		echo "";
 	}
