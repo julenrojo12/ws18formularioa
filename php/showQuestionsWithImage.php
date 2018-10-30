@@ -9,11 +9,6 @@
 	include 'dbKonfiguratu.php';
 
 	$link = new mysqli($zerbitzaria, $erabiltzailea, $gakoa, $db);
-	// No se si esto se puede:
-	//table, th, td {
-    //border: 1px solid black;
-	//}
-	
 	if($link->connect_errno){
 		die( "Huts egin du konexioak MySQL-ra: (".
 			$link-> connect_errno. ") " . 

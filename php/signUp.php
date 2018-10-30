@@ -50,7 +50,7 @@
 				$esteka-> connect_error);
 		}
 		echo "Konexioa egin da:" .$esteka->host_info;
-		
+		echo "<br>";
 		$imagename=$_FILES["file-upload"]["name"];
 		if (!empty($user_id)){
 			$imagetmp=addslashes(file_get_contents($_FILES['file-upload']['tmp_name']));
@@ -69,7 +69,7 @@
 				if (!$ema) {
 					die('Errorea query-a gauzatzerakoan: ' .mysqli_error($esteka));
 				}
-				echo "Erabiltzaile bat gehitu da!";
+				echo "Erabiltzaile bat gehitu da!<br>";
 				echo "<p><a href='../layout.html'> Hasiera </a>";
 				}
 		//

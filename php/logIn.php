@@ -34,6 +34,7 @@
 				$esteka-> connect_error);
 		}
 		echo "Konexioa egin da: - " .$esteka->host_info;
+		echo "<br>";
 		
 		$sql = mysqli_query($esteka,"SELECT * FROM `erregistratuak` WHERE `EPOSTA` LIKE '$_POST[email]'");
 		$count = mysqli_num_rows($sql);
@@ -47,8 +48,8 @@
 				if ($p !=($_POST['pasahitza'])){
 					echo " Pasahitza ez da egokia";
 				}else{
-					echo " Ondo sartu zara!";
-					echo "<p><a href='../layout2.html/?erabil=email'> Hasiera </a>";
+					echo " Ondo sartu zara!<br>";
+					echo "<p><a href='../layout2.html'> Hasiera </a>";
 			}
 			}
 			
