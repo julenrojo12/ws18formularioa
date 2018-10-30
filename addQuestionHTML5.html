@@ -3,41 +3,19 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>ADD QUESTION</title>
-		<!--<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/A726214D-AE8F-2043-B654-2F94B663948B/main.js" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/1C55950A-D85B-CC4E-AC95-386C1CF2F9E7/abn/main.css"/>-->
+		<link rel="stylesheet" type="text/css" href="styles/caja.css">
 	</head>
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
-	
-	<style>
-		.caja{
-			position: relative;
-			
-			width: 500px;
-			font-family: sans-serif;
-			font-size: 16px;
-			font-weight: 400;
-			color: #ffffff;
-			background: #da81f5;
-			margin: 2rem auto;
-			overflow: hidden;
-			padding: 2px;
-			border-radius: 50px 0px 50px 0px;
-			-moz-border-radius: 35px 0px 35px 0px;
-			-webkit-border-radius: 35px 0px 35px 0px;
-			border: 6px solid #e2a9f3;
-			text-align: center;
-		}
-	</style>
-	
 	<body>
 
-	<div class="caja">
+	<div class="cajaMorea">
 	
 		<h1>Galdera berri bat gehitu:</h1>
 		<p>*-k derrigorrezko eremuak</p>
 		<br>
-		<form id="galderenF" name="galderenF" action="php/addQuestionWithImage.php" onsubmit="return checkForm(this);" method="POST" enctype="multipart/form-data"> 
+		<form id="galderenF" name="galderenF" action="php/addQuestionWithImage.php" onsubmit="return true;" method="POST" enctype="multipart/form-data"> 
 			Egilearen eposta(*): <input type="email" name="email" id="email" required pattern="^([a-z]{2,})([0-9]{3})@ikasle\.ehu\.eus$" value="xxxxxx000@ikasle.ehu.eus" onClick="this.value=''" oninvalid="this.setCustomValidity('Sartu emaila formatu egokian')" oninput="setCustomValidity('')"><br>
 			Galderaren testua(*): <input type="text" name="galdera" id="galdera" required pattern="[^']{10,}?$" oninvalid="this.setCustomValidity('Sartu gutxienez 10 karaktereko luzeera duen galdera')" oninput="setCustomValidity('')"><br>
 			Erantzun zuzena(*): <input type="text" name="zuzena" id="zuzena" required oninvalid="this.setCustomValidity('Erantzun zuzena ezin da hutsik utzi.')" oninput="setCustomValidity('')"><br>
