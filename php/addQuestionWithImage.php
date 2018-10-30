@@ -11,6 +11,29 @@
 <?php
 	include 'dbKonfiguratu.php';
 	
+	//lab03:
+	$nameErr=false;
+	$email =($_POST["email"]);
+	if (!preg_match("^([a-z]{2,})([0-9]{3})@ikasle\.ehu\.eus$^",$email)) {
+		$nameErr = "Sartu emaila formatu egokian";
+	}
+	elseif (!preg_match("^.{10}^",($_POST["galdera"]))) {
+		$nameErr = "Sartu gutxienez 10 karaktereko luzeera duen galdera";
+	}
+	elseif (!preg_match("^[0-5]$^",($_POST["zailt"]))) {
+		$nameErr = "Zailtasuna 0 eta 5 arteko zenbakia izan behar da";
+	}
+	elseif (empty($_POST["zuzena"]) || empty($_POST["okerra1"]) || empty($_POST["okerra2"]) || empty($_POST["okerra3"]) || empty($_POST["gaia"])){
+		$nameErr = "Eremu guztiak bete behar dira";
+	}
+
+	if ($nameErr){
+		echo "Formularioa ez da egokia: ";
+		echo $nameErr;
+	}else{
+		$nameErr="Eremu guztiak egokiak dira: ";
+		echo $nameErr;
+	//
 	
 	$esteka = new mysqli($zerbitzaria, $erabiltzailea, $gakoa, $db);
 	
@@ -22,8 +45,13 @@
 	echo "Konexioa egin da:" .$esteka->host_info;
 
 	$imagename=$_FILES["file-upload"]["name"];
-	$imagetmp=addslashes(file_get_contents($_FILES['file-upload']['tmp_name']));
-	$sql = "INSERT INTO questions(EPOSTA,GALDERA,eZuzena,eOkerra1,eOkerra2,eOkerra3,ZAILTASUNA,GAIA,IRUDIA) VALUES ('$_POST[email]','$_POST[galdera]', '$_POST[zuzena]', '$_POST[okerra1]', '$_POST[okerra2]', '$_POST[okerra3]','$_POST[zailt]', '$_POST[gaia]', '$imagetmp')";
+	if (!empty($user_id)){
+		$imagetmp=addslashes(file_get_contents($_FILES['file-upload']['tmp_name']));
+		$sql = "INSERT INTO questions(EPOSTA,GALDERA,eZuzena,eOkerra1,eOkerra2,eOkerra3,ZAILTASUNA,GAIA,IRUDIA) VALUES ('$_POST[email]','$_POST[galdera]', '$_POST[zuzena]', '$_POST[okerra1]', '$_POST[okerra2]', '$_POST[okerra3]','$_POST[zailt]', '$_POST[gaia]', '$imagetmp')";
+	}else{
+		$sql = "INSERT INTO questions(EPOSTA,GALDERA,eZuzena,eOkerra1,eOkerra2,eOkerra3,ZAILTASUNA,GAIA) VALUES ('$_POST[email]','$_POST[galdera]', '$_POST[zuzena]', '$_POST[okerra1]', '$_POST[okerra2]', '$_POST[okerra3]','$_POST[zailt]', '$_POST[gaia]')";
+
+	}
 	
 	$ema=mysqli_query($esteka, $sql);
 	if (!$ema) {
@@ -37,6 +65,7 @@
 	echo "<p><a href='../addQuestionHTML5.html'> Beste galdera bat gehitu </a>";
 	
 	mysqli_close($esteka);
+	}
 ?>
 </body>
 </HTML>

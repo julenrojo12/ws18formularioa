@@ -52,9 +52,13 @@
 		echo "Konexioa egin da:" .$esteka->host_info;
 		
 		$imagename=$_FILES["file-upload"]["name"];
-		$imagetmp=addslashes(file_get_contents($_FILES['file-upload']['tmp_name']));
-		$sql = "INSERT INTO erregistratuak(EPOSTA,DEITURAK,PASAHITZA,ARGAZKIA) VALUES ('$_POST[email]', '$_POST[deiturak]', '$_POST[pasahitza]', '$imagetmp')";
-		
+		if (!empty($user_id)){
+			$imagetmp=addslashes(file_get_contents($_FILES['file-upload']['tmp_name']));
+			$sql = "INSERT INTO erregistratuak(EPOSTA,DEITURAK,PASAHITZA,ARGAZKIA) VALUES ('$_POST[email]', '$_POST[deiturak]', '$_POST[pasahitza]', '$imagetmp')";
+		}else{
+			$sql = "INSERT INTO erregistratuak(EPOSTA,DEITURAK,PASAHITZA) VALUES ('$_POST[email]', '$_POST[deiturak]', '$_POST[pasahitza]')";
+
+		}	
 		//
 		$sql2 = mysqli_query($esteka,"SELECT * FROM `erregistratuak` WHERE `EPOSTA` LIKE '$_POST[email]'");
 		$count = mysqli_num_rows($sql2);
