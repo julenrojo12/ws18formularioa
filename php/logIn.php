@@ -18,7 +18,7 @@
 			<input type="reset" value="Ezabatu"/>
 	</form> 	
 	<br>	
-	<span><a href='signUp.php'>SignUp</span><br>
+	<span><a href='signUp.php'>SignUp</span>
 	<span><a href='../layout.html'>Home</a></span>
 	</div>
 	
@@ -34,7 +34,6 @@
 				$esteka-> connect_error);
 		}
 		echo "Konexioa egin da: - " .$esteka->host_info;
-		echo "<br>";
 		
 		$sql = mysqli_query($esteka,"SELECT * FROM `erregistratuak` WHERE `EPOSTA` LIKE '$_POST[email]'");
 		$count = mysqli_num_rows($sql);
@@ -45,11 +44,15 @@
 				$result = $esteka->query($q);
 				$row = $result->fetch_assoc();
 				$p = $row["PASAHITZA"];
+				$q2 = "SELECT EPOSTA FROM `erregistratuak` WHERE `EPOSTA` LIKE '$_POST[email]'";
+				$result2 = $esteka->query($q2);
+				$row2 = $result2->fetch_assoc();
+				$mail = $row2["EPOSTA"];
 				if ($p !=($_POST['pasahitza'])){
 					echo " Pasahitza ez da egokia";
 				}else{
-					echo " Ondo sartu zara!<br>";
-					echo "<p><a href='../layout2.html'> Hasiera </a>";
+					echo " Ondo sartu zara!";
+					echo "<p><a href='../layout2.html?user=$mail'> Hasiera </a>";
 			}
 			}
 			
