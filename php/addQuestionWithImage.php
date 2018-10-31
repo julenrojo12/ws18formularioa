@@ -45,7 +45,7 @@
 	echo "Konexioa egin da:" .$esteka->host_info;
 
 	$imagename=$_FILES["file-upload"]["name"];
-	if (!empty($user_id)){
+	if (!empty($imagename)){
 		$imagetmp=addslashes(file_get_contents($_FILES['file-upload']['tmp_name']));
 		$sql = "INSERT INTO questions(EPOSTA,GALDERA,eZuzena,eOkerra1,eOkerra2,eOkerra3,ZAILTASUNA,GAIA,IRUDIA) VALUES ('$_POST[email]','$_POST[galdera]', '$_POST[zuzena]', '$_POST[okerra1]', '$_POST[okerra2]', '$_POST[okerra3]','$_POST[zailt]', '$_POST[gaia]', '$imagetmp')";
 	}else{
