@@ -23,7 +23,7 @@
                 <h1>Galdera berri bat gehitu:</h1>
                 <p>*-k derrigorrezko eremuak</p>
                 <br>
-                <form id="galderenF" name="galderenF" action="php/addQuestionWithImage.php" onsubmit="return true;" method="POST" enctype="multipart/form-data">
+                <form id="galderenF" name="galderenF" action="addQuestionWithImage.php" onsubmit="return true;" method="POST" enctype="multipart/form-data">
                     Egilearen eposta(*): <input type="email" name="email" id="email" required pattern="^([a-z]{2,})([0-9]{3})@ikasle\.ehu\.eus$" value="xxxxxx000@ikasle.ehu.eus" onClick="this.value=''" oninvalid="this.setCustomValidity('Sartu emaila formatu egokian')" oninput="setCustomValidity('')"><br>
                     Galderaren testua(*): <input type="text" name="galdera" id="galdera" required pattern="[^']{10,}?$" oninvalid="this.setCustomValidity('Sartu gutxienez 10 karaktereko luzeera duen galdera')" oninput="setCustomValidity('')"><br>
                     Erantzun zuzena(*): <input type="text" name="zuzena" id="zuzena" required oninvalid="this.setCustomValidity('Erantzun zuzena ezin da hutsik utzi.')" oninput="setCustomValidity('')"><br>
