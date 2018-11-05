@@ -8,6 +8,10 @@
 	
 	include 'dbKonfiguratu.php';
 
+	$userName = $_GET['user'];
+    echo "<span id=userPhp>".$userName."</span>";
+	echo "<br>";
+
 	$link = new mysqli($zerbitzaria, $erabiltzailea, $gakoa, $db);
 	if($link->connect_errno){
 		die( "Huts egin du konexioak MySQL-ra: (".
@@ -41,6 +45,6 @@
 		echo "0 galdera";
 	}	
 	
-	echo "<p><a href='../layout2.html'> Hasiera </a>";
+	echo "<p><a href='layout2.php?user=$userName'>Home</a></p>";
 	
 ?>
