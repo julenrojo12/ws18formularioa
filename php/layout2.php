@@ -34,9 +34,10 @@
 			<?php
 				echo "<span><a href='addQuestionHTML5.php?user=$userName'>Add Question</a></span>";
 				echo "<span><a href='showQuestionsWithImage.php?user=$userName'>Show Questions</a></span>";
-				echo "<span><a href='credits2.php?user=$userName'>Credits</a></span>";
 				echo "<span><a href='../xml/questions.xml'>XML Questions</a></span>";
-				echo "<span><a href='/showXMLQuestions.php'>XML Questions (PHP)</a></span>";
+				echo "<span><a href='showXMLQuestions.php'>XML Questions (PHP)</a></span>";
+				echo "<span><a href='../xml/questionsTransAuto.xml'>XML Questions Taula</a></span>";
+				echo "<span><a href='credits2.php?user=$userName'>Credits</a></span>";
 			?>
 		</nav>
 		<section class="main" id="s1">

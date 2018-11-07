@@ -26,7 +26,7 @@
 	$ema=mysqli_query($esteka, $sql);
 	if (!$ema) {
 		die('Errorea query-a gauzatzerakoan: ' .mysqli_error($esteka));
-		echo "<p><a href='../addQuestionHTML5.html'> Sartu galdera berria! </a>";
+		echo "<p><a href='addQuestionHTML5.php'> Sartu galdera berria! </a>";
 	}
 	
 	echo "Erregistro bat gehitu da!";
