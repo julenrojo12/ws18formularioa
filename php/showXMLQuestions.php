@@ -35,3 +35,6 @@
 	?>
 	</tbody>
 </table>
+<?php
+	echo "<span><a href='layout2.php?user=$userName'>HOME</a></span>";
+?>
