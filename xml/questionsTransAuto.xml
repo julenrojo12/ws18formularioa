@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="questions.xlst"?>
+
+<assessmentItems>
+	<assessmentItem author="rosa001@ikasle.ehu.eus" subject="mikologia">
+		<itemBody> 
+			<p>Zein Amanita da jangarria?</p>
+		</itemBody>
+		<correctResponse>
+			<value>Caesarea</value>
+		</correctResponse>
+		<incorrectResponses>
+			<value>Phalloides</value>
+			<value>Muscaria</value>
+			<value>Virosa</value>
+		</incorrectResponses>
+	</assessmentItem>
+	<assessmentItem author="rosa001@ikasle.ehu.eus" subject="mikologia">
+		<itemBody> 
+			<p>Onddoek zer dute kapela azpian?</p>
+		</itemBody>
+		<correctResponse>
+			<value>Himenioa</value>
+		</correctResponse>
+		<incorrectResponses>
+			<value>Filamenduak</value>
+			<value>Eztenak</value>
+			<value>Hodiak</value>
+		</incorrectResponses>
+	</assessmentItem>
+	<assessmentItem author="mafalda001@ikasle.ehu.eus" subject="mikologia">
+		<itemBody>
+			<p>Eranztuna du</p>
+		</itemBody>
+		<correctResponse>
+			<value>Galanpernak</value>
+		</correctResponse>
+		<incorrectResponses>
+			<value>Gibel urdinak</value>
+			<value>Esnegorriak</value>
+			<value>Errotariak</value>
+		</incorrectResponses>
+	</assessmentItem>
+<assessmentItem author="jdiez041@ikasle.ehu.eus" subject="Proba lab4">
+  <itemBody>
+    <p>Lab4 galdera1</p>
+  </itemBody>
+  <correctResponse>
+    <value>ni idea de que va a pasar</value>
+  </correctResponse>
+  <incorrectResponses>
+    <value>controlado</value>
+    <value>muy controlado</value>
+    <value>la duda ofende</value>
+  </incorrectResponses>
+</assessmentItem>
+  <assessmentItem author="jdiez041@ikasle.ehu.eus" subject="Proba lab4">
+    <itemBody>
+      <p>Lab4 galdera2</p>
+    </itemBody>
+    <correctResponse>
+      <value>nidea de lo que hace esto</value>
+    </correctResponse>
+    <incorrectResponses>
+      <value>que si hombre</value>
+      <value>esta controladisimo</value>
+      <value>no me enga&#xF1;es...</value>
+    </incorrectResponses>
+  </assessmentItem>
+  <assessmentItem author="jdiez041@ikasle.ehu.eus" subject="Proba lab4">
+    <itemBody>
+      <p>Lab4 galdera2 intento 2</p>
+    </itemBody><correctResponse>
+      <value>ahora ira</value>
+    </correctResponse>
+    <incorrectResponses>
+      <value>ni de co&#xF1;a</value>
+      <value>noup</value>
+      <value>nada nada</value>
+    </incorrectResponses>
+  </assessmentItem>
+  <assessmentItem author="jdiez041@ikasle.ehu.eus" subject="Proba">
+    <itemBody>
+      <p>Lehenengo galdera</p>
+    </itemBody>
+    <correctResponse>
+      <value>bai</value>
+    </correctResponse>
+    <incorrectResponses>
+      <value>ez</value>
+      <value>bigarrena</value>
+      <value>hirugarrena</value>
+    </incorrectResponses>
+  </assessmentItem>
+<assessmentItem author="jdiez041@ikasle.ehu.eus" subject="proba xml"><itemBody><p>Berriro galdera...</p></itemBody><correctResponse><value>A</value></correctResponse><incorrectResponses><value>B</value><value>C</value><value>D</value></incorrectResponses></assessmentItem></assessmentItems>
