@@ -86,7 +86,33 @@
 	
 	$xml->asXML($file);
 
-	//
+	//lab04 haut1
+	 $file='../xml/questionsTransAuto.xml';
+	$xml= simplexml_load_file($file);
+	
+	if(!$xml){
+		die('Errorea xml fitxategia kargatzean. ');
+		echo "<p><a href='addQuestionHTML5.php'> Sartu galdera berria! </a>";
+	}
+	
+	$assessmentItem=$xml->addChild("assessmentItem");
+	
+	$assessmentItem->addAttribute('author',$_POST['email']);
+	$assessmentItem->addAttribute('subject',$_POST['gaia']);
+	
+	$itemBody=$assessmentItem->addChild('itemBody');
+	$itemBody->addChild('p',$_POST['galdera']);
+	
+	$correctResponse=$assessmentItem->addChild('correctResponse');
+	$correctResponse->addChild('value',$_POST['zuzena']);
+	
+	$incorrectResponses=$assessmentItem->addChild('incorrectResponses');
+	$incorrectResponses->addChild('value',$_POST['okerra1']);
+	$incorrectResponses->addChild('value',$_POST['okerra2']);
+	$incorrectResponses->addChild('value',$_POST['okerra3']);
+	
+	$xml->asXML($file);	
+	//	
 	echo "<br>Erregistro bat gehitu da!";
 	echo "<p><a href='showQuestions.php'> Erregistroak ikusi irudirik gabe </a>";
 	echo "<p><a href='showQuestionsWithImage.php'> Erregistroak ikusi irudiekin </a>";
