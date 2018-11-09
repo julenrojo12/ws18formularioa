@@ -52,7 +52,7 @@
 					echo " Pasahitza ez da egokia";
 				}else{
 					echo " Ondo sartu zara!";
-					echo "<p><a href='../layout2.html?user=$mail'> Hasiera </a>";
+					echo "<p><a href='layout2.php?user=$mail'> Hasiera </a>";
 			}
 			}
 			
