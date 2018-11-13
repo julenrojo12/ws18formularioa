@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
-<?xml-stylesheet type="text/xsl" href="questions.xlst"?>
-
+<?xml-stylesheet type="text/xsl" href="questions.xsl"?>
 <assessmentItems>
 	<assessmentItem author="rosa001@ikasle.ehu.eus" subject="mikologia">
 		<itemBody> 
@@ -64,7 +63,7 @@
     <incorrectResponses>
       <value>que si hombre</value>
       <value>esta controladisimo</value>
-      <value>no me enga&#xF1;es...</value>
+      <value>no me engañes...</value>
     </incorrectResponses>
   </assessmentItem>
   <assessmentItem author="jdiez041@ikasle.ehu.eus" subject="Proba lab4">
@@ -74,7 +73,7 @@
       <value>ahora ira</value>
     </correctResponse>
     <incorrectResponses>
-      <value>ni de co&#xF1;a</value>
+      <value>ni de coña</value>
       <value>noup</value>
       <value>nada nada</value>
     </incorrectResponses>
@@ -92,4 +91,4 @@
       <value>hirugarrena</value>
     </incorrectResponses>
   </assessmentItem>
-<assessmentItem author="jdiez041@ikasle.ehu.eus" subject="proba xml"><itemBody><p>Berriro galdera...</p></itemBody><correctResponse><value>A</value></correctResponse><incorrectResponses><value>B</value><value>C</value><value>D</value></incorrectResponses></assessmentItem></assessmentItems>
+<assessmentItem author="jdiez041@ikasle.ehu.eus" subject="proba xml"><itemBody><p>Berriro galdera...</p></itemBody><correctResponse><value>A</value></correctResponse><incorrectResponses><value>B</value><value>C</value><value>D</value></incorrectResponses></assessmentItem><assessmentItem author="jdiez041@ikasle.ehu.eus" subject="sad"><itemBody><p>aaaaaaaaaaaaaaaaa</p></itemBody><correctResponse><value>a</value></correctResponse><incorrectResponses><value>a</value><value>a</value><value>a</value></incorrectResponses></assessmentItem><assessmentItem author="jdiez041@ikasle.ehu.eus" subject="Limpiatu"><itemBody><p>garbiketa egiteko</p></itemBody><correctResponse><value>estropajo</value></correctResponse><incorrectResponses><value>papel</value><value>carton</value><value>ccleaner</value></incorrectResponses></assessmentItem></assessmentItems>

@@ -10,7 +10,7 @@
               <xs:element name="ENUNTZIATUA" type="xs:string"></xs:element>
               <xs:element name="eZuzena" type="xs:string"></xs:element>
               <xs:element name="eOkerrak" type="xs:string"></xs:element>
-              <xs:element name="ZAILTASUNA " type="xs:int"></xs:element>
+              <xs:element name="ZAILTASUNA " type="xs:integer"></xs:element>
               <xs:element name="GAIA" type="xs:string"></xs:element>
             </xs:sequence>
           </xs:complexType>

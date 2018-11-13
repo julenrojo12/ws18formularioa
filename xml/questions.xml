@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="iso-8859-1"?>
 <assessmentItems>
 	<assessmentItem author="rosa001@ikasle.ehu.eus" subject="mikologia">
 		<itemBody> 
@@ -39,4 +39,55 @@
 			<value>Errotariak</value>
 		</incorrectResponses>
 	</assessmentItem>
-<assessmentItem author="aesc003@ikasle.ehu.eus" subject="XML proba"><itemBody><p>Xml lehen proba</p></itemBody><correctResponse><correctResponse>Ondo</correctResponse></correctResponse><incorrectResponses><value>Txarto</value><value>Puede</value><value>Bueno</value></incorrectResponses></assessmentItem><assessmentItem author="aesc001@ikasle.ehu.eus" subject="XML proba"><itemBody><p>Xml bigarren proba</p></itemBody><correctResponse><value>Bai</value></correctResponse><incorrectResponses><value>Ez</value><value>Ondo</value><value>Txarto</value></incorrectResponses></assessmentItem><assessmentItem author="aesc001@ikasle.ehu.eus" subject="XML proba"><itemBody><p>Xml bigarren proba</p></itemBody><correctResponse><value>Bai</value></correctResponse><incorrectResponses><value>Ez</value><value>Ondo</value><value>Txarto</value></incorrectResponses></assessmentItem><assessmentItem author="aesc001@ikasle.ehu.eus" subject="XML proba"><itemBody><p>Xml bigarren proba</p></itemBody><correctResponse><value>Bai</value></correctResponse><incorrectResponses><value>Ez</value><value>Ondo</value><value>Txarto</value></incorrectResponses></assessmentItem></assessmentItems>
+<assessmentItem author="jdiez041@ikasle.ehu.eus" subject="Proba lab4">
+  <itemBody>
+    <p>Lab4 galdera1</p>
+  </itemBody>
+  <correctResponse>
+    <value>ni idea de que va a pasar</value>
+  </correctResponse>
+  <incorrectResponses>
+    <value>controlado</value>
+    <value>muy controlado</value>
+    <value>la duda ofende</value>
+  </incorrectResponses>
+</assessmentItem>
+  <assessmentItem author="jdiez041@ikasle.ehu.eus" subject="Proba lab4">
+    <itemBody>
+      <p>Lab4 galdera2</p>
+    </itemBody>
+    <correctResponse>
+      <value>nidea de lo que hace esto</value>
+    </correctResponse>
+    <incorrectResponses>
+      <value>que si hombre</value>
+      <value>esta controladisimo</value>
+      <value>no me engañes...</value>
+    </incorrectResponses>
+  </assessmentItem>
+  <assessmentItem author="jdiez041@ikasle.ehu.eus" subject="Proba lab4">
+    <itemBody>
+      <p>Lab4 galdera2 intento 2</p>
+    </itemBody><correctResponse>
+      <value>ahora ira</value>
+    </correctResponse>
+    <incorrectResponses>
+      <value>ni de coña</value>
+      <value>noup</value>
+      <value>nada nada</value>
+    </incorrectResponses>
+  </assessmentItem>
+  <assessmentItem author="jdiez041@ikasle.ehu.eus" subject="Proba">
+    <itemBody>
+      <p>Lehenengo galdera</p>
+    </itemBody>
+    <correctResponse>
+      <value>bai</value>
+    </correctResponse>
+    <incorrectResponses>
+      <value>ez</value>
+      <value>bigarrena</value>
+      <value>hirugarrena</value>
+    </incorrectResponses>
+  </assessmentItem>
+<assessmentItem author="jdiez041@ikasle.ehu.eus" subject="proba xml"><itemBody><p>Berriro galdera...</p></itemBody><correctResponse><value>A</value></correctResponse><incorrectResponses><value>B</value><value>C</value><value>D</value></incorrectResponses></assessmentItem><assessmentItem author="jdiez041@ikasle.ehu.eus" subject="sad"><itemBody><p>aaaaaaaaaaaaaaaaa</p></itemBody><correctResponse><value>a</value></correctResponse><incorrectResponses><value>a</value><value>a</value><value>a</value></incorrectResponses></assessmentItem></assessmentItems>
