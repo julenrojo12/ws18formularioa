@@ -15,7 +15,7 @@
   </head>
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   
-  <body onload="userName()">
+  <body>
 
   
   <div id='page-wrap'>
@@ -37,6 +37,7 @@
 				echo "<span><a href='../xml/questions.xml'>XML Questions</a></span>";
 				echo "<span><a href='showXMLQuestions.php?user=$userName'>XML Questions (PHP)</a></span>";
 				echo "<span><a href='../xml/questionsTransAuto.xml'>XML Questions Taula</a></span>";
+				echo "<span><a href='handlingQuizesAJAX.php?user=$userName&tabla=false'>AJAX lab</a></span>";
 				echo "<span><a href='credits2.php?user=$userName'>Credits</a></span>";
 			?>
 		</nav>
@@ -49,17 +50,6 @@
 		 <a href='https://github.com/wsjdae/ws18'>Link GITHUB</a>
 	</footer>
 	</div>
-	</body>
-	
-	<script>
-		$.urlParam = function(name){
-			var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-			return results[1] || 0;
-		}
-		function userName(){
-			var user = $.urlParam("user");
-			document.getElementById("user").textContent=user;
-			alert("Barruan zaude");
-		}
-	</script>
+</body>
+
 </html>
