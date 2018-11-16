@@ -21,15 +21,16 @@
 			xhro.send();
 		}
 
-		$("#galderenF").submit(function galderakGehitu(event){
-			event.preventDefault(); //prevent default action 
-			var post_url = $(this).attr("action"); //get form action url
-			var request_method = $(this).attr("method"); //get form GET/POST method
-			var form_data = $(this).serialize();
-			
+		function galderakGehitu(event){
+			//event.preventDefault(); //prevent default action 
+			var post_url = $("#galderenF").attr("action"); //get form action url
+			var request_method = $("#galderenF").attr("method"); //get form GET/POST method
+			var form_data = $("#galderenF").serialize();
+			$('#galderenF').trigger("reset");
 			$.ajax(
 		    {
 				url : post_url,
+				cache: false,
 				type: request_method,
 				data : form_data,
 				success: function(data){$('#txtHint').fadeIn().html(data);},
@@ -39,12 +40,13 @@
 				galderakIkusi();
 				                         }
 		           );
-		});
+		};
 		//hautazkoa
 		setInterval(function galderakZenbatu(){
 
 			$.ajax({    //create an ajax request to display.php
 		        type: "GET",
+		        cache: false,
 		        url: "display.php",             
 		        dataType: "html",   //expect html to be returned                
 		        success: function(response){                    
@@ -53,6 +55,7 @@
         	})	
         	$.ajax({    //create an ajax request to display.php
 		        type: "GET",
+		        cache: false,
 		        <?php
 		        echo "url: 'display2.php?user=".$_GET['user']."',"             
 		        ?>
@@ -78,14 +81,14 @@
 		echo "Erabiltzaile izena: <span>".$_GET['user']."</span>";
 	?>
 	<div class="cajaHandia">
-		<div id="demo"></div>
+		<input type='button' name='show' value='Bistaratu nire galderak' onClick="galderakIkusi()">
+		<input type='button' name='add' value='Add Question' onclick="galderakGehitu()">
 		<div>
 			<br>
 			<?php
 			echo "<form id='galderenF' name='galderenF' action='addQuestionWithImageAJAX.php?user=".$_GET['user']."&tabla=true' method='POST' enctype='multipart/form-data'>";
 			?>	
-				<input type='button' name='show' value='Bistaratu nire galderak' onClick="galderakIkusi()">
-				<input type='submit' name='add' value='Add Question'>
+	
 				<br>
 				<br>
 				<?php
