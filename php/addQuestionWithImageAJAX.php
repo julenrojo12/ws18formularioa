@@ -121,7 +121,7 @@
 
 	mysqli_close($esteka);
 	}
-	header("Location: ./handlingQuizesAJAX.php?user=".$_GET['user']."&tabla=".$_GET['tabla']."");
+	header("Location: ./handlingQuizesAJAX.php?user=".$_GET['user']."&tabla=".$_GET['tabla']);
     ?>
 	
 </body>
