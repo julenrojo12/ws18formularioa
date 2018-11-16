@@ -10,6 +10,6 @@
 		$zerbitzaria = "localhost";
 		$erabiltzailea = "root";
 		$gakoa = "";
-		$db = "quiz";
+		$db = "wsdatubase";
 	}
 ?>

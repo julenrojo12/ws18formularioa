@@ -12,7 +12,6 @@
 
 <?php
 	echo "Erabiltzaile izena: <span>".$_GET['user']."</span>";
-	echo "<br>";
 	$file='../xml/questions.xml';
 	$xml= simplexml_load_file($file);
 	
@@ -40,5 +39,5 @@
 	</tbody>
 </table>
 <?php
-	//echo "<span><a href='layout2.php?user=$_GET['user']'>HOME</a></span>";
+	echo "<span><a href='layout2.php?user=".$_GET['user']."'>HOME</a></span>";
 ?>
