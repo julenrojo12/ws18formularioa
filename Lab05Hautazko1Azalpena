@@ -1,1 +1,5 @@
-
+Lehenengo hautazkoa egiteko AJAX eskuratzen dituen funtzionamendua erabili dugu. Hasteko, datu basetik behar diren bi balioak 
+lortzeko behar den php kodea bi fitxategi berrietan sartu ditugu (display.php eta display2.php).  Behin prestaturik 
+galderakZenbatu() izeneko funtzio bat sortu eta bi AJAX sartu ditugu barnean, bakoitza dagokion .php fitxategiari dei egingo
+diona. Azkenik, html kodea barnean balioak idatzi daitezen .html() erabili egin dugu. 
+20segunduro berriz kalkulatu dezan, setInterval() funtzioa gehitu dugu, laborategiaren enuntziatuan azaltzen zen bezala. 
