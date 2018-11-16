@@ -40,7 +40,30 @@
 				                         }
 		           );
 		});
+		//hautazkoa
+		setInterval(function galderakZenbatu(){
 
+			$.ajax({    //create an ajax request to display.php
+		        type: "GET",
+		        url: "display.php",             
+		        dataType: "html",   //expect html to be returned                
+		        success: function(response){                    
+		            $("#guztiak").html(response); 
+        		}
+        	})	
+        	$.ajax({    //create an ajax request to display.php
+		        type: "GET",
+		        <?php
+		        echo "url: 'display2.php?user=".$_GET['user']."',"             
+		        ?>
+		        dataType: "html",   //expect html to be returned                
+		        success: function(response){                    
+		            $("#nireak").html(response); 
+        		}
+        	})	
+		},20000);		
+		//hautazko amaiera
+ 
 
 	</script>
 
@@ -55,7 +78,7 @@
 		echo "Erabiltzaile izena: <span>".$_GET['user']."</span>";
 	?>
 	<div class="cajaHandia">
-
+		<div id="demo"></div>
 		<div>
 			<br>
 			<?php
@@ -90,6 +113,15 @@
 				 <input type="reset" value="Ezabatu" />			
 			</form>
 		</div>
+		<!--hautazkoa-->
+			<br>
+			<div id="galderakop">
+				<?php
+					echo 'Datu basean zureak diren galderak: <span id="nireak"></span>, dauden galdera guztiak: <span id="guztiak"></span>   <br>' ;
+				?>
+			</div>
+
+		<!--hautazkoa amaiera-->
 		<div>
 			<br>
 			<br>
