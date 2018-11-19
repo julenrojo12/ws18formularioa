@@ -44,15 +44,11 @@
 				$result = $esteka->query($q);
 				$row = $result->fetch_assoc();
 				$p = $row["PASAHITZA"];
-				$q2 = "SELECT EPOSTA FROM `erregistratuak` WHERE `EPOSTA` LIKE '$_POST[email]'";
-				$result2 = $esteka->query($q2);
-				$row2 = $result2->fetch_assoc();
-				$mail = $row2["EPOSTA"];
 				if ($p !=($_POST['pasahitza'])){
 					echo " Pasahitza ez da egokia";
 				}else{
 					echo " Ondo sartu zara!";
-					echo "<p><a href='layout2.php?user=$mail'> Hasiera </a>";
+					echo "<p><a href='layout2.php?user=$_POST[email]'> Hasiera </a>";
 			}
 			}
 			

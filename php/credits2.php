@@ -19,7 +19,7 @@
 		<h3> Jon Diez Barrios eta Angela Escondrillas Diez</h3>
 		<h4> Ingenieritza Informatikan lizenziatuak </h4>
 		<img src="../images/pichoncinWS.jpg" alt="Italian Trulli" height="200">
-		<h5>Algortakoak, Getxon, munduaren bihotza</h5><br>
+		<h5>Getxo, Algorta, munduaren bihotza</h5><br>
 
 		<?php
 			echo "<p><a href='layout2.php?user=$userName'>Home</a></p>";

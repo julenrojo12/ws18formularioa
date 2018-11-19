@@ -24,5 +24,5 @@
 	}	
 	
 	
-	echo "<p><a href='layout2.php'> Hasiera </a>";
+	echo "<p><a href='../layout.html'> Hasiera </a>";
 ?>	
