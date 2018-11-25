@@ -3,7 +3,7 @@
 	require_once('../lib/nusoap.php');
 	require_once('../lib/class.wsdlcache.php');
 	//HODEIEAN:
-	$soapclient2 = new nusoap_client('https://ws834621.000webhostapp.com/?dir=Formularioa/php/egiaztatuPasahitza.php?wsdl', true);
+	$soapclient2 = new nusoap_client('https://ws834621.000webhostapp.com/Formularioa/php/egiaztatuPasahitza.php?wsdl', true);
 	//LOKALEAN:
 	//$soapclient2 = new nusoap_client('http://localhost/wsae/ik18/php/egiaztatuPasahitza.php?wsdl', true);
 	$emaitza2 = $soapclient2->call('balioztatu',array('x'=>$_POST['pasahitza'],'y'=>1010));
