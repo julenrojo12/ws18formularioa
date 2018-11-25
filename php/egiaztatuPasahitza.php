@@ -3,7 +3,9 @@
 	require_once('../lib/nusoap.php');
 	require_once('../lib/class.wsdlcache.php');
 	//soap_server motako objektua sortzen dugu
-	$ns="https://ws834621.000webhostapp.com/?dir=Formularioa/php/egiaztatuPasahitza.php?wsdl";
+	//HODEIEAN:
+	$ns="https://ws834621.000webhostapp.com/Formularioa/php/egiaztatuPasahitza.php?wsdl";
+	//LOKALEAN:
 	//$ns="http://localhost/wsae/ik18/php/egiaztatuPasahitza.php?wsdl";
 	$server = new soap_server;
 	$server->configureWSDL('balioztatu',$ns);
