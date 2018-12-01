@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+  session_start();    
+?>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -12,7 +15,7 @@
     
         <header>
             <?php
-            $userName = $_GET['user'];
+            $userName = $_SESSION['erabiltzaile'];
             echo "<span id=userPhp>".$userName."</span>"
             ?>
             <h2>Quiz: crazy questions</h2>
@@ -24,7 +27,7 @@
                 <p>*-k derrigorrezko eremuak</p>
                 <br>
                 <form id="galderenF" name="galderenF" action="addQuestionWithImage.php" onsubmit="return true;" method="POST" enctype="multipart/form-data">
-                    Egilearen eposta(*): <input type="email" name="email" id="email" required pattern="^([a-z]{2,})([0-9]{3})@ikasle\.ehu\.eus$" value="<?php $userName = $_GET['user']; echo $userName ?>" onClick="this.value=''" oninvalid="this.setCustomValidity('Sartu emaila formatu egokian')" oninput="setCustomValidity('')"><br>
+                    Egilearen eposta(*): <input type="email" name="email" id="email" required pattern="^([a-z]{2,})([0-9]{3})@ikasle\.ehu\.eus$" value="<?php $userName = $_SESSION['erabiltzaile']; echo $userName ?>" onClick="this.value=''" oninvalid="this.setCustomValidity('Sartu emaila formatu egokian')" oninput="setCustomValidity('')"><br>
                     Galderaren testua(*): <input type="text" name="galdera" id="galdera" required pattern="[^']{10,}?$" oninvalid="this.setCustomValidity('Sartu gutxienez 10 karaktereko luzeera duen galdera')" oninput="setCustomValidity('')"><br>
                     Erantzun zuzena(*): <input type="text" name="zuzena" id="zuzena" required oninvalid="this.setCustomValidity('Erantzun zuzena ezin da hutsik utzi.')" oninput="setCustomValidity('')"><br>
                     Erantzun okerra #1(*): <input type="text" name="okerra1" id="okerra1" required oninvalid="this.setCustomValidity('Erantzun okerra ezin da hutsik utzi.')" oninput="setCustomValidity('')"><br>
@@ -51,7 +54,7 @@
                 </form>
                 <br>
 				<?php
-					echo "<p><a href='layout2.php?user=$userName'>Home</a></p>"
+					echo "<p><a href='layout.php'>Home</a></p>"
 				?>
         </div>
     

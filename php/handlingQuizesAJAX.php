@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<?php
+  session_start();    
+  if (!isset($_SESSION['erabiltzaile'])) {
+    header('location:../');
+    exit(); // <-- terminates the current script
+  }
+// close the php tag and write your HTML :)
+?>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -16,7 +24,7 @@
 
 		function galderakIkusi(){
 		<?php
-			echo "xhro.open('GET','showXMLQuestionsByAuthor.php?user=".$_GET['user']."', true);";
+			echo "xhro.open('GET','showXMLQuestionsByAuthor.php?user=".$_SESSION['erabiltzaile']."', true);";
 		?>
 			xhro.send();
 		}
@@ -57,7 +65,7 @@
 		        type: "GET",
 		        cache: false,
 		        <?php
-		        echo "url: 'display2.php?user=".$_GET['user']."',"             
+		        echo "url: 'display2.php?user=".$_SESSION['erabiltzaile']."',"             
 		        ?>
 		        dataType: "html",   //expect html to be returned                
 		        success: function(response){                    
@@ -78,7 +86,7 @@
 		if($_GET['tabla']=="true") {
 			echo "<script>galderakIkusi();</script>";
 		}
-		echo "Erabiltzaile izena: <span>".$_GET['user']."</span>";
+		echo "Erabiltzaile izena: <span>".$_SESSION['erabiltzaile']."</span>";
 	?>
 	<div class="cajaHandia">
 		<input type='button' name='show' value='Bistaratu nire galderak' onClick="galderakIkusi()">
@@ -86,13 +94,13 @@
 		<div>
 			<br>
 			<?php
-			echo "<form id='galderenF' name='galderenF' action='addQuestionWithImageAJAX.php?user=".$_GET['user']."&tabla=true' method='POST' enctype='multipart/form-data'>";
+			echo "<form id='galderenF' name='galderenF' action='addQuestionWithImageAJAX.php?user=".$_SESSION['erabiltzaile']."&tabla=true' method='POST' enctype='multipart/form-data'>";
 			?>	
 	
 				<br>
 				<br>
 				<?php
-					echo "Egilearen eposta(*): <input type='email' readonly name='email' id='email' required value=".$_GET['user']."> <br>";
+					echo "Egilearen eposta(*): <input type='email' readonly name='email' id='email' required value=".$_SESSION['erabiltzaile']."> <br>";
 				?>
 				Galderaren testua(*): <input type="text" name="galdera" id="galdera" required pattern="[^']{10,}?$" oninvalid="this.setCustomValidity('Sartu gutxienez 10 karaktereko luzeera duen galdera')" oninput="setCustomValidity('')"><br>
 				Erantzun zuzena(*): <input type="text" name="zuzena" id="zuzena" required oninvalid="this.setCustomValidity('Erantzun zuzena ezin da hutsik utzi.')" oninput="setCustomValidity('')"><br>
@@ -135,15 +143,15 @@
 		<div>
 			<?php
 				echo "<br>";
-				echo "<span><a href='handlingQuizesAJAX.php?user=".$_GET['user']."&tabla=false'>Refresh</a></span>";
+				echo "<span><a href='handlingQuizesAJAX.php?tabla=false'>Refresh</a></span>";
 			?>
 		</div>
 	</div><!--cajaHandia itxi-->
 	<div align="center">
 		<?php
-			echo "<span><a href='credits2.php?user=".$_GET['user']."'>Credits</a></span>";
+			echo "<span><a href='credits.php'>Credits</a></span>";
 			echo "&nbsp";
-			echo "<span><a href='layout2.php?user=".$_GET['user']."'>Home</a></span>";
+			echo "<span><a href='layout.php'>Home</a></span>";
 		?>
 	</div>
 	

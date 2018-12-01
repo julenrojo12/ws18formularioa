@@ -1,3 +1,6 @@
+<?php
+  session_start();    
+?>
 <style>	
 	table, th, td {
 		border: 1px solid black;
@@ -11,7 +14,7 @@
 </style>
 
 <?php
-	echo "Erabiltzaile izena: <span>".$_GET['user']."</span>";
+	echo "Erabiltzaile izena: <span>".$_SESSION["erabiltzaile"]."</span>";
 	$file='../xml/questions.xml';
 	$xml= simplexml_load_file($file);
 	
@@ -27,7 +30,7 @@
 	<tbody>
 	<?php
 	foreach($xml->children() as $assessmentItem){
-		if($_GET['user']==$assessmentItem->attributes()->author){
+		if($_SESSION["erabiltzaile"]==$assessmentItem->attributes()->author){
 			echo "<tr>";
 				echo "<td>" .$assessmentItem->attributes()->author."</td>";
 				echo "<td>" .$assessmentItem->itemBody->p."</td>";
@@ -39,5 +42,5 @@
 	</tbody>
 </table>
 <?php
-	echo "<span><a href='layout2.php?user=".$_GET['user']."'>HOME</a></span>";
+	echo "<span><a href='layout.php'>HOME</a></span>";
 ?>

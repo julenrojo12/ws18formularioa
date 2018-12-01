@@ -38,7 +38,7 @@
 	<br>
 	<span id="mensaje"></span>
 	<span id="mensaje2"></span>
-	<span><a href='../layout.html'>Home</a></span>
+	<span><a href='layout.php'>Home</a></span>
 	</div>
 	
 	<?php
@@ -74,7 +74,7 @@
 				die('Errorea query-a gauzatzerakoan: ' .mysqli_error($esteka));
 				}
 				echo "Erabiltzaile bat gehitu da!<br>";
-				echo "<p><a href='../layout.html'> Hasiera </a>";
+				echo "<p><a href='layout.php'> Hasiera </a>";
 			}
 	}
 	
