@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <?php
   session_start();    
   if (!isset($_SESSION['admin'])) {
@@ -21,6 +21,23 @@
 	}
 	</style>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		xhro=new XMLHttpRequest();
+		xhro.onreadystatechange=function(){
+			//alert(xhro.readyState);
+			if((xhro.readyState==4)&&(xhro.status==200)){
+				document.getElementById("erabiltzaileak").innerHTML=xhro.responseText;
+			}
+		}
+
+		function erabiltzaileakBistaratu(){
+			<?php
+			echo "xhro.open('GET','erabiltzaileakIkusi.php', true);";
+			?>
+			xhro.send();
+		};
+
+	</script>
 </head>
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <body>
@@ -36,42 +53,15 @@
 <br>
 	<span id="mensaje"></span>
 <br>
-	<?php
-	include 'dbKonfiguratu.php';
-		echo "<br>";
 
-		$link = new mysqli($zerbitzaria, $erabiltzailea, $gakoa, $db);
-		if($link->connect_errno){
-			die( "Huts egin du konexioak MySQL-ra: (".
-				$link-> connect_errno. ") " . 
-				$link-> connect_error);
-		}
-		$sql = "SELECT * FROM erregistratuak";
-		$result = $link->query($sql);
-		
-		if ($result->num_rows > 0){
-			echo "<table id='tblData'>
-					<tr>
-						<th>ePosta</th>
-						<th>Deitura</th>
-						<th>Pasahitza</th>
-						<th>Egoera(*)</th>
-						<th>Argazkia</th>				
-					</tr>";
-			while ($row = $result ->fetch_assoc()){
-				echo "<tr><td>" .$row["EPOSTA"]. "</td><td>" .$row["DEITURAK"]. "</td><td>" .$row["PASAHITZA"]. "</td><td>" .$row["BLOKEATUTA"]. "</td><td>";
-				echo '<img id="irudia" src="data:image/jpeg;base64,'.base64_encode( $row['ARGAZKIA'] ).'"/>';
-				echo "</td></tr>";
-			}
-			echo "</table>";
-		}else{
-			echo "0 erabiltzaile";
-		}	
-	?>
+	<div id="erabiltzaileak" align="center">
+				<?php echo "<script>erabiltzaileakBistaratu();</script>"; ?>
+	</div>
 
 <h6>*0 desblokeatuta, 1 blokeatuta</h6>
 
-<script>
+<script type="text/javascript" lenguage="javascript">
+
 		function ezabatzen(){
 			var emailposta =  $('input[name="posta"]');
 			var data = 'posta=' + emailposta.val();
@@ -85,7 +75,10 @@
 				success: function(response){
 					$("#mensaje").html(response);
 				}
-			})
+			}).done(function(data){
+				erabiltzaileakBistaratu();
+				                }
+		           );
 		};	
 
 		function blokeatzen(){
@@ -101,10 +94,12 @@
 				success: function(response){
 					$("#mensaje").html(response);
 				}
-			})
+			}).done(function(data){
+				erabiltzaileakBistaratu();
+				                }
+		           );
 		};
 	</script>
-	<input type="button" value="Birkargatu" onClick="window.location.reload()">
 	<br>
 	<span><a href='layout.php'>Home</a></span>
 </div>
