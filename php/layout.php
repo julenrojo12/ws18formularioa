@@ -45,13 +45,15 @@
 			<span><a href='layout.php'>Home</a></span>
 			<span><a href='/quizzes'>Quizzes</a></span>
 			<?php
-				if(isset($_SESSION['erabiltzaile']) || $_SESSION['admin']){
+				if(isset($_SESSION['erabiltzaile'])){
 				echo "<span><a href='addQuestionHTML5.php?user=$userName'>Add Question</a></span>";
 				echo "<span><a href='showQuestionsWithImage.php?user=$userName'>Show Questions</a></span>";
 				echo "<span><a href='../xml/questions.xml'>XML Questions</a></span>";
 				echo "<span><a href='showXMLQuestions.php?user=$userName'>XML Questions (PHP)</a></span>";
 				echo "<span><a href='../xml/questionsTransAuto.xml'>XML Questions Taula</a></span>";
 				echo "<span><a href='handlingQuizesAJAX.php?tabla=false'>Handling Quizzes</a></span>";
+				}else if ($_SESSION['admin']){
+				    echo "<span><a href='handlingAccounts.php'>Handling Accounts</a></span>";
 				}
 				echo "<span><a href='credits.php'>Credits</a></span>";
 			?>
