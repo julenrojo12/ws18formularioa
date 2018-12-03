@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<?php session_start(); ?>
 <html>
 <head> 
 	<title>LOG IN</title> 
@@ -44,8 +44,15 @@
 				$result = $esteka->query($q);
 				$row = $result->fetch_assoc();
 				$p = $row["PASAHITZA"];
-				if ($p !=($_POST['pasahitza'])){
-					echo " Pasahitza ez da egokia";
+				$encriptedPss = password_hash($_POST['pasahitza'], PASSWORD_DEFAULT);
+				if (!(password_verify($_POST['pasahitza'],$p))){
+					echo "Pasahitza ez da egokia \n\r";
+					echo "<br>";
+					echo "$_POST[pasahitza]";
+					echo "<br>";
+					echo "$p";
+					echo "<br>";
+					echo "$encriptedPss";
 				}else{
 					
 					$mail = $_POST['email'];
@@ -56,7 +63,6 @@
 					if($mail == "admin000@ehu.eus"){
 						echo " Ondo sartu zara!";
 						echo "<p><a href='handlingAccounts.php'> Kontuen kudeaketara joan (admin) </a>";	
-						session_start();
 						$var = $_POST['email'];
 						$_SESSION['admin'] = $var;					
 					}
@@ -66,7 +72,6 @@
 					else {
 						echo " Ondo sartu zara!";
 						echo "<p><a href='handlingQuizesAJAX.php?tabla=false'> Galderen kudeaketara joan </a>";
-						session_start();
 						$var = $_POST['email'];
 						$_SESSION['erabiltzaile'] = $var;
 					}
