@@ -3,6 +3,12 @@ DERRIGORREZKO ATALAREN GARAPENA
 - Pasahitzaren berrezarpena:
   Pasahitzaren berrezkurapena burutzeko egelan zegoen demoa jarraitu egin dugu. Hasteko pasahitzaBerrezarri.php fitxategia sortu 
   eta erabiltzaile anonimoentzako layout.php-n gehitu egin dugu.
+  pasahitzaBerrezarri.php orrian email posta sartzeko formulario bat sortu dugu eta AJAX-en bidez pasBerr.php-ri dei egin diogu.
+  pasBerr.php fitxategian bidaliko den email-aren egitura eta sorrera dago, baita mail() funtzioaren deia. Beraz, behin AJAX
+  deia amaituta, posta bidalita egongo da, kode eta link batekin.
+  Eposta heltzen denean pasahitzaBerrezkuratu.php izeneko orrialde batera bidaliko zaio eta han pasahitza berria eta jasotako 
+  kodea sartu beharko dira. Kodea egokia bada AJAX bidez pasAldatu.php-ra dei egingo zaio eta han pasahitza aldatu egingo da,
+  enkriptatuta sartuz.
   
   
  HAUTAZKO ATALAREN GARAPENA
