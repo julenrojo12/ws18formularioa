@@ -14,4 +14,22 @@ DERRIGORREZKO ATALAREN GARAPENA
  HAUTAZKO ATALAREN GARAPENA
  
  - One Play:
+   Galderak ausaz agertzeko eskatzen duenez enuntziatuak, datu basetik galdera kopurua hartzen dugu, eta array batean 0tik galdera
+   kopurura arteko zenbakiak desordenaturik sartzen ditugu.
+   Ondoren beste bi array-etan galderak eta erantzunak gordetzen ditugu, aurretik lortutako ausazko ordena jarraituz.
+   Hurrengo galdera botoia sakatzean, galdera erakutsi egingo da, eta erantzuna bete ostean, ondo edo gaizki dagoen konproba daiteke.
+   Enuntziatuak esaten du sesio berdinean ezin dela galdera bat errepikatu. Hori egiteko, ordenaren array-a $_SESSION aldagai batean
+   gordeko dugu, kontagailu batekin batera. Horrela, berriro sartzean geuden galdera kargatuko da. Saioa amaituko da erabiltzaile bat
+   logeatzen denean.
+   Horretaz aparte, pentsatu egin dugu lagungarria izango zela saioa berriro hasteko aukera ematea, galdera guztiak behin erantzunda
+   berriro jolastu ahal izateko. Hau egiteko, bi botoi gehitu ditugu, batekin saioa ixten da, eta bestearekin orria freskatzen da,
+   ausazko array berri bat sortarazteko.
  
+ - Play by subject:
+   Erabilpen kasu hau egiteko, lehendabizi Add Questions aldatu egin dugu, .xml berri batean gaiak sartzeko, aurretik existitzen ez
+   bazen.
+   PLaying bym subject orrian desplegable bat izango dugu, nahi dugun gaia aukeratzeko, eta botoia sakatuz gai orri buruz gordeta
+   dauzkagun galderak erakutsiko dira, gehienez 3, erantzunekin batera, beste desplegable batean daudenak.
+   Galderan erantzunda, Bidali botoia sakatuz emaitzak jasoko dira: Zenbat asmatu eta zenbat huts egin dituzun jakinaraziz.
+   Oharra: Bataz besteko zailtasuna ere agertzen da, baina bakarrik localhost-ean funtzionatzen du, webhosten NaN agertzen da.
+           Ezin izan dugu konpondu.
